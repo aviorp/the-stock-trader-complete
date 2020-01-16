@@ -30,8 +30,9 @@ const actions = {
         let parsedNumber = Number(payload.quantity);
         let newFunds = state.funds - (stock.price * parsedNumber);
         let portfolioIndex = portfolio.findIndex(el => el.id === stock.id);
-        if (newFunds <= 0) {
+        if (newFunds < 0) {
             alert('You dont have enougth money for this amount.')
+            return;
         } else if (portfolioIndex !== -1) {
             portfolio[portfolioIndex].quantity += parsedNumber;
         } else {
