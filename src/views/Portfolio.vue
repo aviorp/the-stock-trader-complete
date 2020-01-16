@@ -2,7 +2,7 @@
   <div>
       <v-row>
           <v-col v-for="(item ,index ) in portfolio"  :key="item.id" >
-              <transition-group appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOut" mode="out-in" >     
+              <transition-group appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in" >     
      <app-item 
       :title="item.name"
       :price="item.price"
